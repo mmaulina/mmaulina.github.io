@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PortoMaya</title>
+
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+
+    <!--Bootstrap ================================================== -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+
+    <!--vendor css ================================================== -->
+    <link rel="stylesheet" type="text/css" href="assets/css/vendor.css">
+
+    <!-- Style Sheet -->
+    <link rel="stylesheet" href="assets/css/styles.css">
+    <link rel="stylesheet" href="assets/css/custom.css">
+
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <!-- zoom img -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
+</head>
+
+<body>
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+        <symbol id="quote-left" viewBox="0 0 24 24">
+            <path fill="currentColor"
+                d="M3.691 6.292C5.094 4.771 7.217 4 10 4h1v2.819l-.804.161c-1.37.274-2.323.813-2.833 1.604A2.9 2.9 0 0 0 6.925 10H10a1 1 0 0 1 1 1v7c0 1.103-.897 2-2 2H3a1 1 0 0 1-1-1v-5l.003-2.919c-.009-.111-.199-2.741 1.688-4.789M20 20h-6a1 1 0 0 1-1-1v-5l.003-2.919c-.009-.111-.199-2.741 1.688-4.789C16.094 4.771 18.217 4 21 4h1v2.819l-.804.161c-1.37.274-2.323.813-2.833 1.604A2.9 2.9 0 0 0 17.925 10H21a1 1 0 0 1 1 1v7c0 1.103-.897 2-2 2" />
+        </symbol>
+        <symbol id="arrow-right" viewBox="0 0 24 24">
+            <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3" />
+        </symbol>
+        <symbol id="arrow-left" viewBox="0 0 24 24">
+            <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18" />
+        </symbol>
+        <symbol id="linkedin" viewBox="0 0 16 16">
+            <path fill="currentColor" d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0
+                .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0
+                14.854zM4.943 13.5V6.169H2.542V13.5zm-1.2-8.332c.837 0 1.358-.554
+                1.358-1.248-.015-.709-.521-1.248-1.342-1.248S2.4 3.211 2.4
+                3.92c0 .694.521 1.248 1.327 1.248zm9.257 8.332V9.359c0-2.22-1.183-3.252-2.761-3.252-1.274
+                0-1.845.7-2.165 1.193v-1.024H5.674c.03.678 0 7.224 0
+                7.224h2.4v-4.034c0-.216.016-.432.08-.586.173-.431.568-.878
+                1.232-.878.869 0 1.216.662 1.216 1.634V13.5z" />
+        </symbol>
+        <symbol id="github" viewBox="0 0 16 16">
+            <path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47
+                7.59.4.07.55-.17.55-.38
+                0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52
+                -.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87
+                2.33.66.07-.52.28-.87.5-1.07-1.78-.2-3.64-.89-3.64-3.95
+                0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12
+                0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68
+                0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44
+                1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15
+                0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54
+                1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013
+                8.013 0 0 0 16 8c0-4.42-3.58-8-8-8" />
+        </symbol>
+        <symbol id="instagram" viewBox="0 0 24 24">
+            <path fill="currentColor"
+                d="M13.028 2c1.125.003 1.696.009 2.189.023l.194.007c.224.008.445.018.712.03c1.064.05 1.79.218 2.427.465c.66.254 1.216.598 1.772 1.153a4.9 4.9 0 0 1 1.153 1.772c.247.637.415 1.363.465 2.428c.012.266.022.487.03.712l.006.194c.015.492.021 1.063.023 2.188l.001.746v1.31a79 79 0 0 1-.023 2.188l-.006.194c-.008.225-.018.446-.03.712c-.05 1.065-.22 1.79-.466 2.428a4.9 4.9 0 0 1-1.153 1.772a4.9 4.9 0 0 1-1.772 1.153c-.637.247-1.363.415-2.427.465l-.712.03l-.194.006c-.493.014-1.064.021-2.189.023l-.746.001h-1.309a78 78 0 0 1-2.189-.023l-.194-.006a63 63 0 0 1-.712-.031c-1.064-.05-1.79-.218-2.428-.465a4.9 4.9 0 0 1-1.771-1.153a4.9 4.9 0 0 1-1.154-1.772c-.247-.637-.415-1.363-.465-2.428l-.03-.712l-.005-.194A79 79 0 0 1 2 13.028v-2.056a79 79 0 0 1 .022-2.188l.007-.194c.008-.225.018-.446.03-.712c.05-1.065.218-1.79.465-2.428A4.9 4.9 0 0 1 3.68 3.678a4.9 4.9 0 0 1 1.77-1.153c.638-.247 1.363-.415 2.428-.465c.266-.012.488-.022.712-.03l.194-.006a79 79 0 0 1 2.188-.023zM12 7a5 5 0 1 0 0 10a5 5 0 0 0 0-10m0 2a3 3 0 1 1 .001 6a3 3 0 0 1 0-6m5.25-3.5a1.25 1.25 0 0 0 0 2.5a1.25 1.25 0 0 0 0-2.5" />
+        </symbol>
+        <symbol id="whatsapp" viewBox="0 0 16 16">
+            <path fill="currentColor"
+                d="M13.601 2.326A7.854 7.854 0 0 0 8.008 0C3.58 0 0 3.58 0 8a7.9 7.9 0 0 0 1.146 4.124L0 16l4.004-1.05a7.9 7.9 0 0 0 4.004 1.09h.003c4.427 0 8.008-3.58 8.008-8a7.85 7.85 0 0 0-2.418-5.674M8.008 14.5a6.45 6.45 0 0 1-3.29-.9l-.235-.14-2.375.623.633-2.316-.153-.237a6.46 6.46 0 1 1 5.42 2.97m3.537-4.827c-.193-.097-1.145-.564-1.323-.628-.177-.065-.306-.097-.435.097-.129.193-.5.628-.612.757-.113.129-.226.145-.419.048-.193-.097-.815-.3-1.552-.957-.573-.511-.96-1.142-1.073-1.335-.113-.193-.012-.297.085-.393.087-.086.193-.226.29-.338.097-.113.129-.194.193-.323.065-.129.033-.242-.016-.338-.048-.097-.435-1.048-.596-1.435-.157-.377-.316-.326-.435-.332h-.37c-.129 0-.338.048-.516.242-.177.193-.677.661-.677 1.613 0 .951.693 1.87.79 1.999.097.129 1.364 2.082 3.305 2.919.462.199.823.318 1.104.407.464.148.886.127 1.22.077.372-.055 1.145-.467 1.307-.919.161-.451.161-.838.113-.919-.048-.08-.177-.129-.37-.226" />
+        </symbol>
+        <symbol id="pinterest" viewBox="0 0 24 24">
+            <g fill="none">
+                <path
+                    d="m12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035q-.016-.005-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427q-.004-.016-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093q.019.005.029-.008l.004-.014l-.034-.614q-.005-.018-.02-.022m-.715.002a.02.02 0 0 0-.027.006l-.006.014l-.034.614q.001.018.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z" />
+                <path fill="currentColor"
+                    d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2S2 6.477 2 12c0 4.006 2.356 7.462 5.758 9.058l2.29-10.766a1 1 0 0 1 1.956.416C11.73 12 11.49 12.5 11.501 13.1c.017.94.273 1.442.521 1.702c.253.265.618.408 1.095.4c.487-.01 1.038-.181 1.526-.489C15.592 14.117 16 13.095 16 12a4 4 0 1 0-7.668 1.6a1 1 0 0 1-1.832.8a6 6 0 1 1 11 0c-.368.848-1.04 1.534-1.792 2.007c-.755.475-1.657.779-2.555.795c-.819.015-1.672-.212-2.359-.808L9.66 21.726c.75.18 1.534.275 2.339.275Z" />
+            </g>
+        </symbol>
+        <symbol id="youtube" viewBox="0 0 24 24">
+            <path fill="currentColor"
+                d="m10 15l5.19-3L10 9zm11.56-7.83c.13.47.22 1.1.28 1.9c.07.8.1 1.49.1 2.09L22 12c0 2.19-.16 3.8-.44 4.83c-.25.9-.83 1.48-1.73 1.73c-.47.13-1.33.22-2.65.28c-1.3.07-2.49.1-3.59.1L12 19c-4.19 0-6.8-.16-7.83-.44c-.9-.25-1.48-.83-1.73-1.73c-.13-.47-.22-1.1-.28-1.9c-.07-.8-.1-1.49-.1-2.09L2 12c0-2.19.16-3.8.44-4.83c.25-.9.83-1.48 1.73-1.73c.47-.13 1.33-.22 2.65-.28c1.3-.07 2.49-.1 3.59-.1L12 5c4.19 0 6.8.16 7.83.44c.9.25 1.48.83 1.73 1.73" />
+        </symbol>
+        <symbol id="paintbrush" viewBox="0 0 16 16">
+            <path fill="currentColor"
+                d="m5.6 11.6l-1.2-1.2c-.8-.2-2-.1-2.7 1c-.8 1.1-.3 2.8-1.7 4.6c0 0 3.5 0 4.8-1.3c1.2-1.2 1.2-2.2 1-3zm.2-3.5c-.2.3-.5.7-.7 1c0 .2-.1.3-.2.4L6.4 11c.1-.1.3-.2.4-.3c.3-.2.7-.4 1-.7c.4 0 .6-.2.8-.4L6.4 7.4c-.2.2-.4.4-.6.7m10-7.9c-.3-.3-.7-.3-1-.1c0 0-3 2.5-5.9 5.1c-.4.4-.7.7-1.1 1c-.2.2-.4.4-.6.5l2.1 2.1c.2-.2.4-.4.5-.7c.3-.4.6-.7.9-1.1c2.5-3 5.1-5.9 5.1-5.9c.3-.2.3-.6 0-.9" />
+        </symbol>
+        <symbol id="t-shirt" viewBox="0 0 20 20">
+            <g fill="currentColor">
+                <path fill-rule="evenodd"
+                    d="m2.668 10.009l1.166-.583V16.5a2.5 2.5 0 0 0 2.5 2.5h7.335a2.5 2.5 0 0 0 2.5-2.5V9.425l1.166.581a.5.5 0 0 0 .71-.338l.945-4.236a.5.5 0 0 0-.135-.463l-2.248-2.24A2.5 2.5 0 0 0 14.842 2h-2.007a.5.5 0 0 0-.493.415c-.287 1.658-1.04 2.409-2.342 2.409c-1.3 0-2.054-.751-2.34-2.409A.5.5 0 0 0 7.167 2H5.161a2.5 2.5 0 0 0-1.766.73L1.15 4.97a.5.5 0 0 0-.135.462l.943 4.238a.5.5 0 0 0 .711.338M5.161 3h1.598C7.195 4.84 8.297 5.824 10 5.824S12.806 4.84 13.243 3h1.6a1.5 1.5 0 0 1 1.058.437l2.053 2.046l-.745 3.343l-1.317-.656a.5.5 0 0 0-.723.448V16.5a1.5 1.5 0 0 1-1.5 1.5H6.334a1.5 1.5 0 0 1-1.5-1.5V8.618a.5.5 0 0 0-.724-.448l-1.316.658l-.744-3.345l2.051-2.045A1.5 1.5 0 0 1 5.161 3"
+                    clip-rule="evenodd" />
+                <path d="M12 10.5a.5.5 0 0 1 0-1h2a.5.5 0 0 1 0 1z" />
+            </g>
+        </symbol>
+        <symbol id="box" viewBox="0 0 24 24">
+            <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-width="1.5"
+                d="m15.578 3.382l2 1.05c2.151 1.129 3.227 1.693 3.825 2.708C22 8.154 22 9.417 22 11.942v.117c0 2.524 0 3.787-.597 4.801c-.598 1.015-1.674 1.58-3.825 2.709l-2 1.049C13.822 21.539 12.944 22 12 22s-1.822-.46-3.578-1.382l-2-1.05c-2.151-1.129-3.227-1.693-3.825-2.708C2 15.846 2 14.583 2 12.06v-.117c0-2.525 0-3.788.597-4.802c.598-1.015 1.674-1.58 3.825-2.708l2-1.05C10.178 2.461 11.056 2 12 2s1.822.46 3.578 1.382ZM21 7.5l-4 2M12 12L3 7.5m9 4.5v9.5m0-9.5l4.5-2.25l.5-.25m0 0V13m0-3.5l-9.5-5" />
+        </symbol>
+        <symbol id="search" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+            <path fill="currentColor"
+                d="M19 3C13.488 3 9 7.488 9 13c0 2.395.84 4.59 2.25 6.313L3.281 27.28l1.439 1.44l7.968-7.969A9.922 9.922 0 0 0 19 23c5.512 0 10-4.488 10-10S24.512 3 19 3zm0 2c4.43 0 8 3.57 8 8s-3.57 8-8 8s-8-3.57-8-8s3.57-8 8-8z" />
+        </symbol>
+        <symbol xmlns="http://www.w3.org/2000/svg" id="close" viewBox="0 0 16 16">
+            <path
+                d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8 2.146 2.854Z" />
+        </symbol>
+    </svg>
+
+    <div class="preloader">
+        <div class="loader"></div>
+    </div>
+
+    <nav id="header-nav" class="navbar navbar-expand-lg py-4" data-bs-theme="dark">
+        <div class="container-fluid padding-side">
+
+            <!-- Logo -->
+            <a class="navbar-brand" href="index.html"
+                style="font-family: 'Bebas Neue', sans-serif; font-size: 3rem; letter-spacing: 2px;">
+                <span style="color: #ffffff;">Porto</span><span style="color: #7baeff;">Maya</span>
+            </a>
+
+            <!-- Language Dropdown -->
+            <div class="dropdown ms-auto">
+
+                <button class="btn button rounded-pill dropdown-toggle px-4" type="button" data-bs-toggle="dropdown"
+                    style="text-transform: none;">
+
+                    🌐 English
+
+                </button>
+
+                <ul class="dropdown-menu dropdown-menu-end">
+
+                    <li>
+                        <a class="dropdown-item" href="index.html">
+                            🇬🇧 English
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="dropdown-item" href="index-id.html">
+                            🇮🇩 Indonesia
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+    </nav>
+
+    <section id="hero" class="padding-medium">
+        <div class="container text-white">
+
+            <div class="row justify-content-center text-center">
+                <div class="col-xl-8">
+                    <p class="letter-space text-primary fs-4" data-aos="fade-up" data-aos-duration="1000">
+                        Hi! I'm Maya Maulina
+                    </p>
+                    <h2 class="display-1" data-aos="fade-up" data-aos-duration="1200">
+                        Freelance Graphic Designer & Web Developer
+                    </h2>
+                    <p data-aos="fade-up" data-aos-duration="1400">
+                        Creating functional websites and meaningful visual experiences through technology and
+                        creativity.
+                    </p>
+                    <a href="#projects" class="btn button rounded-pill mt-4 position-relative pe-5 z-1"
+                        data-aos="fade-up" data-aos-duration="1600">
+                        <span> view all projects </span>
+                        <div class="position-absolute top-50 end-0 translate-middle-y me-2">
+                            <svg class="arrow-right bg-white text-black rounded-circle p-2" width="35" height="35">
+                                <use xlink:href="#arrow-right"></use>
+                            </svg>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="container-fluid padding-side position-relative">
+        <div class="position-absolute top-0 start-50 translate-middle d-none d-xxl-block">
+            <img src="assets/images/bg-pattern-blue.png" alt="bg-img"
+                style="width: 1500px; height: 800px;  opacity: 0.5;">
+
+        </div>
+        <div class="position-absolute top-100 start-50 translate-middle d-none d-xxl-block">
+            <img src="assets/images/bg-pattern-blue.png" alt="bg-img"
+                style="width: 1500px; height: 800px; opacity: 0.5;">
+
+        </div>
+        <div class="border border-light border-opacity-25 rounded-5"
+            style="background-color: rgba(255, 255, 255, 0.06); box-shadow: 0px 12px 90px rgba(106, 30, 188, 0.2);">
+            <section id="achievements" class="padding-medium">
+                <div class="process-content container" data-aos="fade-up">
+                    <div id="counter" class="row justify-content-center text-center">
+
+                        <!-- Years Experience -->
+                        <div class="col-lg-4 col-6 text-center">
+                            <div class="d-flex justify-content-center align-items-center">
+                                <h4 class="counter-value display-1 banner-size" data-count="2">2</h4>
+                                <span class="text-primary display-1 fw-lighter">+</span>
+                            </div>
+                            <p class="text-capitalize mb-0">Years Experience</p>
+                        </div>
+
+                        <!-- Projects Completed -->
+                        <div class="col-lg-4 col-6 text-center">
+                            <div class="d-flex justify-content-center align-items-center">
+                                <h4 class="counter-value display-1 banner-size" data-count="10">10</h4>
+                                <span class="text-primary display-1 fw-lighter">+</span>
+                            </div>
+                            <p class="text-capitalize mb-0">Projects Completed</p>
+                        </div>
+
+                        <!-- Technologies Used -->
+                        <div class="col-lg-4 col-6 text-center">
+                            <div class="d-flex justify-content-center align-items-center">
+                                <h4 class="counter-value display-1 banner-size" data-count="10">10</h4>
+                                <span class="text-primary display-1 fw-lighter">+</span>
+                            </div>
+                            <p class="text-capitalize mb-0">Technologies Used</p>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <section id="experiences">
+                <div class="container">
+                    <div class="row" data-aos="fade-up" data-aos-duration="1500">
+                        <div class="col-lg-6 mb-5 mb-lg-0">
+                            <h3 class="display-3 mb-4">Experiences<span class="text-primary">.</span></h3>
+
+                            <div class="border-start border-primary ps-3 border-opacity-50 mb-5">
+                                <p class="text-primary fw-semibold">May 2025 - Present</p>
+                                <h5 class="display-6">Project Assistant · Self-employed</h5>
+                                <p>
+                                    Assisted in preparing reports, creating charts and tables,
+                                    developing presentation materials, and producing project documents
+                                    for consulting projects.
+                                </p>
+                            </div>
+
+                            <div class="border-start border-primary ps-3 border-opacity-50 mb-5">
+                                <p class="text-primary fw-semibold">March 2025 - Present</p>
+                                <h5 class="display-6">Web Developer · Wasaka Code</h5>
+                                <p>
+                                    Developed and maintained web-based applications as part of a collaborative team.
+                                    Contributed to database design, feature development, user interface implementation,
+                                    testing, and deployment.
+                                </p>
+                            </div>
+
+                            <div class="border-start border-primary ps-3 border-opacity-50 mb-5">
+                                <p class="text-primary fw-semibold">August 2024 - Present</p>
+                                <h5 class="display-6">Small Business Owner · desain.ln</h5>
+                                <p>
+                                    Managing a creative business providing graphic design services for social media,
+                                    promotional materials, documents, and visual communication needs.
+                                </p>
+                            </div>
+
+                            <div class="border-start border-primary ps-3 border-opacity-50 mb-5">
+                                <p class="text-primary fw-semibold">September 2025 - January 2026</p>
+                                <h5 class="display-6">Administrative Assistant · CV Berkat Usaha</h5>
+                                <p>
+                                    Managed project administration, documentation, reporting, and data processing
+                                    to support operational activities.
+                                </p>
+                            </div>
+
+                            <div class="border-start border-primary ps-3 border-opacity-50 mb-5">
+                                <p class="text-primary fw-semibold">November 2024 - June 2025</p>
+                                <h5 class="display-6">Tutor · Bimbel 122 Edutama</h5>
+                                <p>
+                                    Provided academic mentoring and guided students in improving their understanding
+                                    of mathematics and other subjects.
+                                </p>
+                            </div>
+
+                            <div class="border-start border-primary ps-3 border-opacity-50 mb-5">
+                                <p class="text-primary fw-semibold">October 2024 - April 2025</p>
+                                <h5 class="display-6">Tutor · Bimbel Gemilang</h5>
+                                <p>
+                                    Supported students through engaging and effective learning experiences
+                                    while fostering academic growth.
+                                </p>
+                            </div>
+
+                            <div class="border-start border-primary ps-3 border-opacity-50">
+                                <p class="text-primary fw-semibold">September 2023 - November 2023</p>
+                                <h5 class="display-6">Technician Intern · BMKG</h5>
+                                <p>
+                                    Assisted in technical operations and gained hands-on experience in instrumentation,
+                                    maintenance, and workplace procedures during the internship program.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+
+                            <h3 class="display-3 mb-4">
+                                Core Skills<span class="text-primary">.</span>
+                            </h3>
+
+                            <!-- Development -->
+                            <div class="mb-5">
+                                <h5 class="text-primary fw-semibold mb-3">Development</h5>
+
+                                <div class="border-start border-primary ps-3 border-opacity-50 mb-3">
+                                    <h5 class="display-6">HTML, CSS & Bootstrap</h5>
+                                </div>
+
+                                <div class="border-start border-primary ps-3 border-opacity-50 mb-3">
+                                    <h5 class="display-6">JavaScript</h5>
+                                </div>
+
+                                <div class="border-start border-primary ps-3 border-opacity-50 mb-3">
+                                    <h5 class="display-6">PHP & MySQL</h5>
+                                </div>
+
+                                <div class="border-start border-primary ps-3 border-opacity-50 mb-3">
+                                    <h5 class="display-6">CodeIgniter</h5>
+                                </div>
+
+                                <div class="border-start border-primary ps-3 border-opacity-50">
+                                    <h5 class="display-6">Git & GitHub</h5>
+                                </div>
+                            </div>
+
+                            <!-- Design -->
+                            <div class="mb-5">
+                                <h5 class="text-primary fw-semibold mb-3">Design</h5>
+
+                                <div class="border-start border-primary ps-3 border-opacity-50 mb-3">
+                                    <h5 class="display-6">Canva</h5>
+                                </div>
+
+                                <div class="border-start border-primary ps-3 border-opacity-50 mb-3">
+                                    <h5 class="display-6">Pixellab</h5>
+                                </div>
+
+                                <div class="border-start border-primary ps-3 border-opacity-50 mb-3">
+                                    <h5 class="display-6">Figma</h5>
+                                </div>
+
+                                <div class="border-start border-primary ps-3 border-opacity-50 mb-3">
+                                    <h5 class="display-6">CorelDRAW</h5>
+                                </div>
+                            </div>
+
+                            <!-- Documentation & Analysis -->
+                            <div class="mb-5">
+                                <h5 class="text-primary fw-semibold mb-3">Documentation & Analysis</h5>
+
+                                <div class="border-start border-primary ps-3 border-opacity-50 mb-3">
+                                    <h5 class="display-6">Microsoft Office</h5>
+                                </div>
+
+                                <div class="border-start border-primary ps-3 border-opacity-50 mb-3">
+                                    <h5 class="display-6">Data Processing</h5>
+                                </div>
+
+                                <div class="border-start border-primary ps-3 border-opacity-50 mb-3">
+                                    <h5 class="display-6">Documentation</h5>
+                                </div>
+
+                                <div class="border-start border-primary ps-3 border-opacity-50">
+                                    <h5 class="display-6">Technical Report Writing</h5>
+                                </div>
+
+                                <div class="border-start border-primary ps-3 border-opacity-50">
+                                    <h5 class="display-6">Presentation Design</h5>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="row mt-5" data-aos="fade-up">
+                        <div class="col-lg-6 mb-5 mb-lg-0">
+                            <h3 class="display-3 mb-4">Interests<span class="text-primary">.</span></h3>
+                            <div class="border-start border-primary ps-3 border-opacity-50 mb-5">
+                                <h5 class="display-6">Graphic Design</h5>
+                                <p>Creating visual content and transforming ideas into meaningful designs.</p>
+                            </div>
+                            <div class="border-start border-primary ps-3 border-opacity-50 mb-5">
+                                <h5 class="display-6">Web Development</h5>
+                                <p>Building responsive and functional digital experiences.</p>
+                            </div>
+                            <div class="border-start border-primary ps-3 border-opacity-50">
+                                <h5 class="display-6">Photography & Videography</h5>
+                                <p>Capturing moments and stories through visual media.</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <h3 class="display-3 mb-4">Education<span class="text-primary">.</span></h3>
+                            <div class="border-start border-primary ps-3 border-opacity-50 mb-5">
+                                <p class="text-primary fw-semibold">2020-2024</p>
+                                <h5 class="display-6">
+                                    Bachelor of Informatics Engineering (S.Kom)
+                                    <br>
+                                    Universitas Islam Kalimantan Muhammad Arsyad Al-Banjari
+                                </h5>
+                                <p>
+                                    Graduated with a focus on software development and information systems.
+                                </p>
+                            </div>
+                            <div class="border-start border-primary ps-3 border-opacity-50">
+                                <p class="text-primary fw-semibold">2017 - 2020</p>
+                                <h5 class="display-6">
+                                    Mathematics and Science Program
+                                    <br>
+                                    SMA Negeri 3 Banjarbaru
+                                </h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="projects" class="padding-medium container" data-aos="fade-up">
+                <div class="text-center">
+                    <h3 class="display-3">Latest projects<span class="text-primary">.</span></h3>
+                    <p>Here’s a showcase of some of my favorite projects. <br> Each design tells a unique story and
+                        reflects the client’s brand essence.</p>
+                    <div class="my-5">
+                        <p>
+                            <button class="filter-button py-3 px-5 me-2 mb-3 active" data-filter="*">
+                                All
+                            </button>
+                            <button class="filter-button py-3 px-5 me-2 mb-3" data-filter=".design">
+                                Graphic Design
+                            </button>
+                            <button class="filter-button py-3 px-5 me-2 mb-3" data-filter=".web">
+                                Website
+                            </button>
+                        </p>
+                    </div>
+                </div>
+                <div class="isotope-container row">
+                    <div class="item web col-md-6 p-3">
+                        <div class="blog-post">
+                            <div class="image-zoom rounded-3">
+                                <a href="assets/images/sippinda.png" class="glightbox blog-img"
+                                    data-gallery="portfolio">
+
+                                    <img src="assets/images/sippinda.png" alt="SIPPINDA" class="img-fluid">
+
+                                </a>
+                            </div>
+                            <p class="text-uppercase text-primary fw-semibold mt-3">Web Development</p>
+                            <h5 class="display-6"><a href="portfolio-details.html">SIPPINDA</a>
+                            </h5>
+                        </div>
+                    </div>
+                    <div class="item web col-md-6 p-3">
+                        <div class="blog-post">
+                            <div class="image-zoom rounded-3">
+                                <a href="assets/images/ewasdal.png" class="glightbox blog-img" data-gallery="portfolio">
+
+                                    <img src="assets/images/ewasdal.png" alt="E-Wasdal Gatrik" class="img-fluid">
+
+                                </a>
+                            </div>
+                            <p class="text-uppercase text-primary fw-semibold mt-3">Web Development</p>
+                            <h5 class="display-6"><a href="portfolio-details.html">E-Wasdal Gatrik</a>
+                            </h5>
+                        </div>
+                    </div>
+                    <div class="item web col-md-6 p-3">
+                        <div class="blog-post">
+                            <div class="image-zoom rounded-3">
+                                <a href="assets/images/tahsin.png" class="glightbox blog-img" data-gallery="portfolio">
+
+                                    <img src="assets/images/tahsin.png" alt="Tahsin & Tahfidz KDK Al-Karomah"
+                                        class="img-fluid">
+
+                                </a>
+                            </div>
+                            <p class="text-uppercase text-primary fw-semibold mt-3">Web Development</p>
+                            <h5 class="display-6"><a href="portfolio-details.html">Tahsin & Tahfidz KDK Al-Karomah</a>
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <section id="footer" style="padding-top: 180px;">
+        <div class="container padding-medium pt-0" data-aos="fade-up">
+
+            <div class="text-center">
+                <h2 class="display-4">Let's Connect<span class="text-primary">.</span></h2>
+
+                <p class="mt-3">
+                    Thank you for visiting my portfolio 🚀✨ <br> Feel free to connect with me through
+                    the platforms below. I'm always open to new opportunities and collaborations.
+                </p>
+            </div>
+
+            <ul class="d-flex gap-4 list-unstyled justify-content-center my-4">
+
+                <!-- Instagram -->
+                <li>
+                    <a class="nav-link p-0" href="https://instagram.com/mmaulinaaa__" target="_blank">
+                        <svg class="accent-color" width="24" height="24">
+                            <use xlink:href="#instagram"></use>
+                        </svg>
+                    </a>
+                </li>
+
+                <!-- LinkedIn -->
+                <li>
+                    <a class="nav-link p-0" href="https://www.linkedin.com/in/mmaulina16/" target="_blank">
+                        <svg class="accent-color" width="24" height="24">
+                            <use xlink:href="#linkedin"></use>
+                        </svg>
+                    </a>
+                </li>
+
+                <!-- GitHub -->
+                <li>
+                    <a class="nav-link p-0" href="https://github.com/mmaulina" target="_blank">
+                        <svg class="accent-color" width="24" height="24">
+                            <use xlink:href="#github"></use>
+                        </svg>
+                    </a>
+                </li>
+
+                <!-- Pinterest -->
+                <li>
+                    <a class="nav-link p-0" href="https://id.pinterest.com/mmaulina16/" target="_blank">
+                        <svg class="accent-color" width="24" height="24">
+                            <use xlink:href="#pinterest"></use>
+                        </svg>
+                    </a>
+                </li>
+
+                <!-- WhatsApp -->
+                <li>
+                    <a class="nav-link p-0" href="https://wa.me/628115128607" target="_blank">
+                        <svg class="accent-color" width="24" height="24">
+                            <use xlink:href="#whatsapp"></use>
+                        </svg>
+                    </a>
+                </li>
+
+            </ul>
+
+            <div class="text-center mt-5">
+                <p class="mb-0">© 2026 PortoMaya</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- script ================================================== -->
+    <script src="assets/js/jquery-1.11.0.min.js"></script>
+
+    <!-- Bootstarp script ================================================== -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
+
+    <!-- Swiper script ================================================== -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+    <!--iconify script ================================================== -->
+    <script src="https://cdn.jsdelivr.net/npm/iconify-icon@1.0.7/dist/iconify-icon.min.js"></script>
+
+
+    <script src="assets/js/plugins.js"></script>
+    <script src="assets/js/script.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+
+    <!-- zoom img -->
+    <script>
+        const lightbox = GLightbox();
+    </script>
+</body>
+
+</html>

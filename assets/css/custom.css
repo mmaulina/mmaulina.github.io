@@ -1,0 +1,46 @@
+:root {
+  --accent-color: #7baeff;
+
+  --bs-body-color-rgb: 53, 53, 53;
+  --bs-primary-rgb: 123, 174, 255;
+  --bs-secondary-rgb: 249, 246, 243;
+}
+
+.btn-gradient {
+  --bs-btn-color: #fff;
+  background-image: linear-gradient(to right, #7baeff, #5c5cff);
+  border: 0;
+}
+
+.button {
+  background: #7baeff;
+}
+
+.button:hover {
+  color: white;
+  background: #7baeff;
+}
+
+.button::before {
+  background: radial-gradient(circle closest-side, #5c5cff, transparent);
+}
+
+.loader {
+  border-top-color: #7baeff;
+}
+
+.loader:before {
+  border-top-color: #5c5cff;
+}
+
+.loader:after {
+  border-top-color: #7d8cff;
+}
+
+button.filter-button.active {
+  background-image: linear-gradient(to right, #7baeff, #5c5cff);
+}
+
+button.filter-button:hover {
+  background-image: linear-gradient(to right, #7baeff, #5c5cff);
+}
