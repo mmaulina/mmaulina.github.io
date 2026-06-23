@@ -394,7 +394,7 @@ a.nav-link:hover {
 
 /* Tombol bahasa pada HP */
 @media only screen and (max-width: 576px) {
-  #header-nav .button {
+  .language-btn {
     padding: 8px 12px !important;
     font-size: 12px;
     min-height: auto;
