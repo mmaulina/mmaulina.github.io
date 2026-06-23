@@ -15,24 +15,23 @@ This is main CSS file that contains custom style rules used in this template
     Table of contents
 \*------------------------------------*/
 
-
 /** Base Styles
 --------------------------------------------------------------*/
 :root {
-  --accent-color: #B775FF;
+  --accent-color: #b775ff;
   --secondary-color: ;
-  --dark-color: #2D2D2D;
-  --white-color: #FFFFFF;
+  --dark-color: #2d2d2d;
+  --white-color: #ffffff;
   --grey-color: #777777;
   --body-text-color: #333333;
   --light-text-color: #929292;
-  --link-color: #B7C177;
-  --background-color: #FAFAFA;
+  --link-color: #b7c177;
+  --background-color: #fafafa;
 
   /* bootstrap color-scheme */
   --bs-dark-rgb: 80, 80, 80;
-  --bs-gray-100: #EAE5DD;
-  --bs-gray-300: #DCDCDC;
+  --bs-gray-100: #eae5dd;
+  --bs-gray-300: #dcdcdc;
   --bs-body-color-rgb: 53, 53, 53;
   --bs-primary-rgb: 183, 117, 255;
   --bs-secondary-rgb: 249, 246, 243;
@@ -43,7 +42,6 @@ This is main CSS file that contains custom style rules used in this template
   --heading-font: "Bebas Neue", serif;
   --body-font: "Poppins", serif;
 }
-
 
 /*  General Styles
     /*----------------------------------------------*/
@@ -67,7 +65,7 @@ body {
   font-weight: 400;
   font-size: 16px;
   line-height: 1.688rem;
-  background-color: #0F0E10;
+  background-color: #0f0e10;
   color: var(--white-color);
 }
 
@@ -103,7 +101,6 @@ a:hover {
 .letter-space {
   letter-spacing: 5px;
 }
-
 
 /* Section Padding
   --------------------------------------------------------------*/
@@ -153,7 +150,6 @@ a:hover {
   margin-bottom: 15rem;
 }
 
-
 /* bootstrap button override
   --------------------------------------------------------------*/
 .btn {
@@ -168,7 +164,7 @@ a:hover {
 
 .btn-gradient {
   --bs-btn-color: #fff;
-  background-image: linear-gradient(to right, #7710E9, #8F3AEC);
+  background-image: linear-gradient(to right, #7710e9, #8f3aec);
   border: 0;
 }
 
@@ -178,7 +174,7 @@ a:hover {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  background: #7710E9;
+  background: #7710e9;
   border: none;
   color: white;
   cursor: pointer;
@@ -191,7 +187,7 @@ a:hover {
 
 .button:hover {
   color: white;
-  background: #7710E9;
+  background: #7710e9;
 }
 
 .button span {
@@ -201,22 +197,23 @@ a:hover {
 
 .button::before {
   --size: 0;
-  content: '';
+  content: "";
   position: absolute;
   left: var(--x);
   top: var(--y);
   width: var(--size);
   height: var(--size);
-  background: radial-gradient(circle closest-side, #8F3AEC, transparent);
+  background: radial-gradient(circle closest-side, #8f3aec, transparent);
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
-  transition: width .2s ease, height .2s ease;
+  transition:
+    width 0.2s ease,
+    height 0.2s ease;
 }
 
 .button:hover::before {
   --size: 400px;
 }
-
 
 /* bootstrap Dropdown override
   --------------------------------------------------------------*/
@@ -261,12 +258,10 @@ a:hover {
 
 .accordion-button:not(.collapsed)::after {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23fff' d='M12 14.975q-.2 0-.375-.062T11.3 14.7l-4.6-4.6q-.275-.275-.275-.7t.275-.7t.7-.275t.7.275l3.9 3.9l3.9-3.9q.275-.275.7-.275t.7.275t.275.7t-.275.7l-4.6 4.6q-.15.15-.325.213t-.375.062'/%3E%3C/svg%3E");
-  ;
 }
 
 .accordion-button::after {
   background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%23fff' d='M12 14.975q-.2 0-.375-.062T11.3 14.7l-4.6-4.6q-.275-.275-.275-.7t.275-.7t.7-.275t.7.275l3.9 3.9l3.9-3.9q.275-.275.7-.275t.7.275t.275.7t-.275.7l-4.6 4.6q-.15.15-.325.213t-.375.062'/%3E%3C/svg%3E");
-  ;
 }
 
 .accordion-button:focus {
@@ -282,7 +277,6 @@ a:hover {
   background: var(--accent-color);
 }
 
-
 /* Preloader
 ------------------------------------------------------------- */
 .preloader {
@@ -293,7 +287,7 @@ a:hover {
   top: 0;
   left: 0;
   z-index: 111;
-  background: #0F0E10;
+  background: #0f0e10;
 }
 
 .loader {
@@ -306,7 +300,7 @@ a:hover {
   margin: -75px 0 0 -75px;
   border-radius: 50%;
   border: 3px solid transparent;
-  border-top-color: #7710E9;
+  border-top-color: #7710e9;
   -webkit-animation: spin 2s linear infinite;
   animation: spin 2s linear infinite;
 }
@@ -320,7 +314,7 @@ a:hover {
   bottom: 5px;
   border-radius: 50%;
   border: 3px solid transparent;
-  border-top-color: #8F3AEC;
+  border-top-color: #8f3aec;
   -webkit-animation: spin 3s linear infinite;
   animation: spin 3s linear infinite;
 }
@@ -334,7 +328,7 @@ a:hover {
   bottom: 15px;
   border-radius: 50%;
   border: 3px solid transparent;
-  border-top-color: #B775FF;
+  border-top-color: #b775ff;
   -webkit-animation: spin 1.5s linear infinite;
   animation: spin 1.5s linear infinite;
 }
@@ -367,11 +361,8 @@ a:hover {
   }
 }
 
-
-
 /* Section Styles
 /*----------------------------------------------*/
-
 
 /*---- navigation section style start ----*/
 nav.navbar {
@@ -397,7 +388,16 @@ a.nav-link:hover {
 @media only screen and (max-width: 991px) {
   nav.navbar {
     font-size: 25px;
-    border-bottom: #2D2D2D;
+    border-bottom: #2d2d2d;
+  }
+}
+
+/* Tombol bahasa pada HP */
+@media only screen and (max-width: 576px) {
+  #header-nav .button {
+    padding: 8px 12px !important;
+    font-size: 12px;
+    min-height: auto;
   }
 }
 
@@ -411,17 +411,17 @@ a.nav-link:hover {
 /*---- portfolio section style start ----*/
 button.filter-button {
   border: none;
-  background-color: #423B4A;
+  background-color: #423b4a;
   color: var(--white-color);
   border-radius: 30px;
 }
 
 button.filter-button.active {
-  background-image: linear-gradient(to right, #7710E9, #8F3AEC);
+  background-image: linear-gradient(to right, #7710e9, #8f3aec);
 }
 
 button.filter-button:hover {
-  background-image: linear-gradient(to right, #7710E9, #8F3AEC);
+  background-image: linear-gradient(to right, #7710e9, #8f3aec);
 }
 
 /* Image zoom effect on hover */
