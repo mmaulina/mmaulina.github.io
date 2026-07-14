@@ -58,18 +58,13 @@
     initPreloader();
 
     // Isotope Initialization
-    $(window).on("load", function () {
-      var $container = $(".isotope-container");
-
-      if ($container.length) {
-        $container.isotope({
-          itemSelector: ".item",
-          layoutMode: "masonry",
-        });
-
-        $container.isotope("layout");
-      }
-    });
+    var $container = $(".isotope-container");
+    if ($container.length) {
+      $container.isotope({
+        itemSelector: ".item",
+        layoutMode: "masonry",
+      });
+    }
 
     // Chocolat Lightbox Init
     if ($(".image-link").length) {
